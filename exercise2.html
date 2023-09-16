@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .my-div {
+            width: 80px;
+            height: 70px;
+            background-color: red;
+            margin: 1px;
+            cursor: pointer; /* Add a pointer cursor to indicate clickable elements */
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    <div id="outer">
+        <p>Hello from outer</p>
+    </div>
+    
+    <div id="1" class="my-div" onclick="showid(this)"> 
+        <p>Hi from num1</p>
+    </div>
+
+    <div id="2" class="my-div" onclick="showid(this)">
+        <p>Hello from num2</p>
+    </div>
+
+    <div id="3" class="my-div" onclick="showid(this)"> 
+        <p>Hello from num3</p>
+    </div>
+    
+    <div id="4" class="my-div" onclick="showid(this)">
+        <p>Hello from num4</p>
+    </div>
+    
+    <div id="5" class="my-div" onclick="showid(this)"> 
+        <p>Hello from num5</p>
+    </div>
+    
+    <div id="6" class="my-div" onclick="showid(this)">
+        <p>Hello from num6</p>
+    </div>
+    
+    <div id="7" class="my-div" onclick="showid(this)"> 
+        <p>Hello from num7</p>
+    </div>
+    
+    <div id="8" class="my-div" onclick="showid(this)">
+        <p>Hello from num8</p>
+    </div>
+    
+    <div id="9" class="my-div" onclick="showid(this)"> 
+        <p>Hello from num9</p>
+    </div>
+    
+    <div id="10" class="my-div" onclick="showid(this)">
+        <p>Hello from num10</p>
+    </div>
+</div>
+
+-->
+
+<div id="outer" class="my-div">
+    <p>Hello from outer</p>
+</div>
+
+<div id="1" class="my-div"> 
+    <p>Hi from num1</p>
+</div>
+
+<div id="2" class="my-div">
+    <p>Hello from num2</p>
+</div>
+
+<div id="3" class="my-div"> 
+    <p>Hello from num3</p>
+</div>
+
+<div id="4" class="my-div">
+    <p>Hello from num4</p>
+</div>
+
+<div id="5" class="my-div"> 
+    <p>Hello from num5</p>
+</div>
+
+<div id="6" class="my-div">
+    <p>Hello from num6</p>
+</div>
+
+<div id="7" class="my-div"> 
+    <p>Hello from num7</p>
+</div>
+
+<div id="8" class="my-div">
+    <p>Hello from num8</p>
+</div>
+
+<div id="9" class="my-div"> 
+    <p>Hello from num9</p>
+</div>
+
+<div id="10" class="my-div">
+    <p>Hello from num10</p>
+</div>
+
+
+<p id="par"> hej</p>
+
+
+
+    <script>
+
+               
+            let elements =  document.getElementsByClassName("my-div")
+
+            for (let index = 0; index < elements.length; index++) {
+                 elements[index].addEventListener("click", function (e){
+                    let id = e.currentTarget.id
+                    console.log(id)
+                    document.getElementById("par").innerHTML = id
+                 })
+            }
+        
+    </script>
+</body>
+</html>
